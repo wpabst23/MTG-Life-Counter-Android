@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.billy.mtglifecounter.LifeCounter">
+
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        android:id="@+id/pOnePlus"
+        android:layout_alignTop="@+id/pOneLife"
+        android:layout_toRightOf="@+id/pOneLife"
+        android:layout_toEndOf="@+id/pOneLife" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-1"
+        android:id="@+id/pTwoMinus"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/pTwoLife"
+        android:layout_toStartOf="@+id/pTwoLife"
+        android:layout_marginBottom="49dp" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pOneLife"
+        android:text="40"
+        android:textSize="100dp"
+        android:numeric="integer"
+        tools:ignore="TextViewEdits"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-1"
+        android:id="@+id/pOneMinus"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/pOneLife"
+        android:layout_toEndOf="@+id/pOneLife" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pTwoLife"
+        android:text="40"
+        android:textSize="100dp"
+        android:numeric="integer"
+        tools:ignore="TextViewEdits"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        android:id="@+id/pTwoPlus"
+        android:layout_alignTop="@+id/pTwoLife"
+        android:layout_toLeftOf="@+id/pTwoLife"
+        android:layout_toStartOf="@+id/pTwoLife" />
+
+    <TextView
+        android:text="beta version for Ice Imports,  written by William Pabst"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:maxLines = "500"
+        android:id="@+id/log"
+        android:scrollHorizontally="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="vertical"
+        android:textAlignment="viewStart"
+        android:layout_below="@+id/iceLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        android:id="@+id/pThreePlus"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/pThreeLife"
+        android:layout_toEndOf="@+id/pThreeLife" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-1"
+        android:id="@+id/pThreeMinus"
+        android:layout_alignBottom="@+id/pThreeLife"
+        android:layout_toRightOf="@+id/pThreeLife"
+        android:layout_toEndOf="@+id/pThreeLife" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        android:id="@+id/pFourPlus"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/pTwoPlus"
+        android:layout_alignStart="@+id/pTwoPlus" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pFourLife"
+        android:textSize="100dp"
+        android:numeric="integer"
+        tools:ignore="TextViewEdits"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:text="40" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-1"
+        android:id="@+id/pFourMinus"
+        android:layout_alignBottom="@+id/pFourLife"
+        android:layout_toLeftOf="@+id/pFourLife"
+        android:layout_toStartOf="@+id/pFourLife" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pThreeLife"
+        android:text="40"
+        android:textSize="100dp"
+        android:numeric="integer"
+        tools:ignore="TextViewEdits"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/icelogo"
+        android:id="@+id/iceLogo"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="1v1"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:id="@+id/backBTN"
+        android:layout_alignTop="@+id/pTwoPlus"
+        android:layout_toLeftOf="@+id/pTwoPlus"
+        android:layout_toStartOf="@+id/pTwoPlus" />
+
+    <Button
+        android:text="Shop"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:id="@+id/shopBTN"
+        android:layout_below="@+id/backBTN"
+        android:layout_toLeftOf="@+id/pTwoMinus"
+        android:layout_toStartOf="@+id/pTwoMinus" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:id="@+id/resetBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/pTwoMinus"
+        android:layout_toStartOf="@+id/pTwoMinus" />
+
+</RelativeLayout>

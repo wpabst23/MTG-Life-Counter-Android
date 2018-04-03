@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.billy.mtglifecounter.LifeCounter">
+
+
+    <TextView
+        android:text="0"
+        android:layout_height="125dp"
+        android:id="@+id/stormText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="100dp"
+        android:visibility="invisible"
+        android:layout_width="125dp"
+        android:layout_below="@+id/imageS"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/energyText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="100dp"
+        android:visibility="invisible"
+        android:layout_alignBaseline="@+id/stormText"
+        android:layout_alignBottom="@+id/stormText"
+        android:layout_alignLeft="@+id/stormText"
+        android:layout_alignStart="@+id/stormText" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/poisonText"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="100dp"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/stormText"
+        android:layout_alignBottom="@+id/stormText"
+        android:layout_alignLeft="@+id/stormText"
+        android:layout_alignStart="@+id/stormText" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/p"
+        android:id="@+id/imageP"
+        android:visibility="visible"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/imageS"
+        android:layout_alignStart="@+id/imageS" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/e"
+        android:id="@+id/imageE"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/imageS"
+        android:layout_alignStart="@+id/imageS" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/s"
+        android:id="@+id/imageS"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/stormText"
+        android:layout_alignStart="@+id/stormText"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/p"
+        android:id="@+id/poisonButton"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/stormText"
+        android:layout_alignLeft="@+id/stormText"
+        android:layout_alignStart="@+id/stormText" />
+
+    <Button
+        android:text="-"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/recMinus"
+        android:layout_below="@+id/recPlus"
+        android:layout_alignLeft="@+id/recPlus"
+        android:layout_alignStart="@+id/recPlus" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/e"
+        android:id="@+id/energyButton"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/stormText"
+        android:layout_toRightOf="@+id/poisonButton"
+        android:layout_toEndOf="@+id/poisonButton" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/s"
+        android:id="@+id/stormButton"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/stormText"
+        android:layout_toRightOf="@+id/energyButton"
+        android:layout_toEndOf="@+id/energyButton" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-1"
+        android:id="@+id/pOneMinus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/pOnePlus"
+        android:layout_alignStart="@+id/pOnePlus" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pOneLife"
+        android:text="20"
+        android:textSize="100dp"
+        android:numeric="integer"
+        tools:ignore="TextViewEdits"
+        android:layout_above="@+id/pOneMinus"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/pTwoLife"
+        android:text="20"
+        android:textSize="100dp"
+        android:numeric="integer"
+        tools:ignore="TextViewEdits"
+        android:layout_above="@+id/pTwoMinus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-1"
+        android:id="@+id/pTwoMinus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/pTwoPlus"
+        android:layout_alignStart="@+id/pTwoPlus" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        android:id="@+id/pOnePlus"
+        android:layout_above="@+id/pOneLife"
+        android:layout_alignRight="@+id/pOneLife"
+        android:layout_alignEnd="@+id/pOneLife" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+1"
+        android:id="@+id/pTwoPlus"
+        android:layout_above="@+id/pTwoLife"
+        android:layout_alignLeft="@+id/pTwoLife"
+        android:layout_alignStart="@+id/pTwoLife" />
+
+    <Button
+        android:text="+"
+        android:layout_height="50dp"
+        android:id="@+id/recPlus"
+        android:layout_width="50dp"
+        android:layout_alignTop="@+id/stormText"
+        android:layout_toRightOf="@+id/stormText"
+        android:layout_toEndOf="@+id/stormText" />
+
+    <TextView
+        android:text="beta version for Ice Imports written by William Pabst"
+        android:layout_width="150dp"
+        android:layout_height="225dp"
+        android:maxLines = "500"
+        android:id="@+id/log"
+        android:scrollHorizontally="false"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/recMinus"
+        android:layout_toRightOf="@+id/recMinus" />
+
+    <Button
+        android:text="Reset"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/resetBtn"
+        android:layout_marginBottom="36dp"
+        android:layout_above="@+id/pTwoMinus"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/icelogo"
+        android:id="@+id/iceLogo"
+        android:cropToPadding="false"
+        android:adjustViewBounds="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Shop"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/shopBTN"
+        android:layout_above="@+id/resetBtn"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="EDH"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/edhBTN"
+        android:layout_below="@+id/resetBtn"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
